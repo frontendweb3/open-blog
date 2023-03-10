@@ -11,11 +11,17 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <>
-      <h1 className='text-red-200'>Rajdeep Singh</h1>
 
-      <Header />
-      <Footer />
       <Card />
-     </>
+      <Card />
+      <Card />
+
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+
+    </>
   )
 }
