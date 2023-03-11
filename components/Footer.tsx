@@ -9,8 +9,8 @@ function Footer() {
 
       <div className="container flex flex-wrap items-center justify-between mx-auto">
 
-        <a href="https://flowbite.com/" className="flex items-center">
-          <span className="self-center text-gray-400 text-sm font-semibold whitespace-nowrap dark:text-white">2023 copyright by frontend web</span>
+        <a href="https://github.com/frontendweb3" className="flex items-center">
+          <span className="self-center text-gray-400 text-sm font-semibold whitespace-nowrap dark:text-white">2023 copyright frontend web</span>
         </a>
 
         <div className="flex md:order-2">
