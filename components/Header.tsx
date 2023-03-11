@@ -14,7 +14,7 @@ function Header() {
         </a>
 
         <div className="flex md:order-2">
-          <ul className="flex flex-row p-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex flex-wrap p-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <a href="#" className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
                 <FaSearch />
@@ -39,8 +39,8 @@ function Header() {
               </a>
             </li>
             <li >
-              <button className="block py-2 pl-3 pr-4 rounded md:p-0" onClick={()=> setTheme( theme === "dark"? "light": "dark" )}>
-              { theme==="dark"? <FaSun/>: <FaRegMoon/> }
+              <button className="block py-2 pl-3 pr-4 rounded md:p-0" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+                {theme === "dark" ? <FaSun /> : <FaRegMoon />}
               </button>
             </li>
           </ul>
