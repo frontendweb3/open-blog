@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaGlobe, FaSun, FaRegMoon } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaGlobe } from "react-icons/fa";
 import Card from "@/components/Card"
 function Authors() {
 
