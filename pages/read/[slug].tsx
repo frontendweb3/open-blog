@@ -25,11 +25,9 @@ function Read() {
 
                   <a href="/authors/rajdeepsingh" rel="author" className="text-xl font-bold text-gray-900 dark:text-white">Jese Leos</a>
 
-                  <p className="text-base font-light text-gray-500 dark:text-gray-400 mx-1">
-                    <time pubdate={true} datetime={"2022-02-08"} title="February 8th, 2022">
-                      Feb. 8, 2022
-                    </time>
-                  </p>
+                  <time className="text-base font-light text-gray-500 dark:text-gray-400 mx-1" dateTime={"2022-02-08".toString()} title="February 8th, 2022">
+                    Feb. 8, 2022
+                  </time>
 
                   <div className="text-base w-1 h-1 rounded-full bg-black dark:bg-white mx-1"></div>
 
