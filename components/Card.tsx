@@ -1,13 +1,18 @@
 import Image from "next/image"
+import Link from "next/link";
+
 
 function Card({ title }: { title: string }) {
 
   return (
 
     <div className="max-w-full bg-white dark:bg-gray-800">
-      <a href="#">
+
+
+      <Link href="#">
         <Image className="rounded-lg p-3" width={1000} height={324} src="/moon.jpg" alt="moon" />
-      </a>
+      </Link>
+
 
       <div className="p-3">
 
@@ -18,9 +23,9 @@ function Card({ title }: { title: string }) {
         </div>
 
 
-        <a href="#">
+        <Link href="/read/how-are-you">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
-        </a>
+        </Link>
 
       </div>
 
