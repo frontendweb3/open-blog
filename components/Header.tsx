@@ -1,6 +1,7 @@
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSearch, FaSun, FaRegMoon } from "react-icons/fa";
 import { useTheme } from 'next-themes'
 import Link from "next/link";
+import Serach from "@/components/Serach";
 function Header() {
   const { theme, setTheme } = useTheme()
 
@@ -19,8 +20,8 @@ function Header() {
 
             <li>
 
-              <Link href={"#"}  className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
-                <FaSearch />
+              <Link href={"#"} className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
+                <Serach />
               </Link>
 
             </li>
@@ -31,8 +32,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#" 
-              className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
+              <Link href="#"
+                className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
               </Link>
             </li>
             <li>
