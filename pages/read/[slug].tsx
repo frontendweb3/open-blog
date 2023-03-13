@@ -1,5 +1,6 @@
 import MorePost from "@/components/MorePost";
 import Signup from "@/components/Signup";
+import Link from "next/link";
 
 function Read() {
 
@@ -23,7 +24,7 @@ function Read() {
 
                   <img className="mr-4 w-10 h-10 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Jese Leos" />
 
-                  <a href="/authors/rajdeepsingh" rel="author" className="text-xl font-bold text-gray-900 dark:text-white">Jese Leos</a>
+                  <Link href="/authors/rajdeepsingh" rel="author" className="text-xl font-bold text-gray-900 dark:text-white">Jese Leos</Link>
 
                   <time className="text-base font-light text-gray-500 dark:text-gray-400 mx-1" dateTime={"2022-02-08".toString()} title="February 8th, 2022">
                     Feb. 8, 2022
