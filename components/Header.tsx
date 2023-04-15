@@ -1,8 +1,10 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSearch, FaSun, FaRegMoon } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSun, FaRegMoon } from "react-icons/fa";
 import { useTheme } from 'next-themes'
 import Link from "next/link";
 import Search from "@/components/Search";
+
 function Header() {
+
   const { theme, setTheme } = useTheme()
 
   return (
@@ -19,11 +21,9 @@ function Header() {
           <ul className="flex flex-wrap p-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
 
             <li>
-
-              <Link href={"#"} className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
+              <button className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
                 <Search />
-              </Link>
-
+              </button>
             </li>
 
             <li>
@@ -32,8 +32,7 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#"
-                className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
+              <Link href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
               </Link>
             </li>
             <li>
