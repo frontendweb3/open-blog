@@ -16,9 +16,11 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "flexsearch": "^0.7.31",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-use-flexsearch": "^0.1.1",
     "typescript": "4.9.5",
     "use-orama": "^0.1.7"
   },
