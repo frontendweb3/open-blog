@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
-
-function Card({ item }) {
+import { type Posts } from "@/type";
+function Card({ item }: { item: Posts }) {
 
   return (
 
