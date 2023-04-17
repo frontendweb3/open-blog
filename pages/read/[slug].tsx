@@ -1,20 +1,52 @@
-// import MorePost from "@/components/MorePost";
 import Newsletter from "@/components/Newsletter";
 import Link from "next/link";
 import Image from 'next/image';
+import { posts } from "@/data/posts";
+import { type Posts } from "@/type";
+
+export async function getStaticProps(context: { params: { slug: string } }) {
+
+  const { slug } = context.params
 
 
-function Read() {
+  for (const item of posts) {
+    if (item.title.toLowerCase().trim().split(" ").join("-") === slug) {
+      return {
+        props: {
+          post: JSON.stringify(item)
+        }
+      }
+    }
+  }
+}
+
+
+export async function getStaticPaths() {
+
+  const paths: { params: { slug: string } }[] = posts.map(item => ({ params: { slug: item.title.toLowerCase().trim().split(" ").join("-") } }));
+
+  return {
+    paths: paths,
+    fallback: false,
+  }
+
+}
+
+function Read({ post }: { post: string }) {
+
+  let singlePost: Posts = JSON.parse(post)
 
   return (
     <>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
           <article className="mx-auto w-full max-w-3xl format format-xl sm:format-base  format-blue dark:format-invert">
-            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Best practices for successful prototypes</h1>
+            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+              {singlePost.title}
+            </h1>
 
             <p className="lead">
-              Flowbite is an open-source library of UI components built with the utility-first classes from Tailwind CSS. It also includes interactive elements such as dropdowns, modals, datepickers.
+              {singlePost.description}
             </p>
 
             <header className="mb-4 lg:mb-6 not-format">
@@ -23,9 +55,9 @@ function Read() {
 
                 <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
 
-                  <Image height={40} width={40} className="mr-4 w-10 h-10 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-2.jpg" alt="Jese Leos" />
+                  <Image height={40} width={40} className="mr-4 w-10 h-10 rounded-full" src={singlePost.image} alt={singlePost.title} />
 
-                  <Link href="/authors/jese-leos" rel="author" className="text-xl font-bold text-gray-900 dark:text-white">Jese Leos</Link>
+                  <Link href={`/authors/${singlePost.author.toLowerCase().trim().split(" ").join("-")}`} rel="author" className="text-xl font-bold text-gray-900 dark:text-white">{singlePost.author}</Link>
 
                   <time className="text-base font-light text-gray-500 dark:text-gray-400 mx-1" dateTime={"2022-02-08".toString()} title="February 8th, 2022">
                     Feb. 8, 2022
