@@ -67,7 +67,7 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Blog", "five", "Secrets"],
     category: ["Blog"],
     image: "/images/blog-2.jpg",
-    author: "Rajdeep singh"
+    author: "Cameron Stewart"
   },
   {
     id: "1X9",
