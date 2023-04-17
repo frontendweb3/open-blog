@@ -1,41 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import * as Popover from '@radix-ui/react-popover';
 import { FaSearch } from "react-icons/fa";
 import Link from 'next/link';
-import { Index } from "flexsearch";
-import { posts } from "@/data/posts";
-
+import { searchWithFuse } from "@/components/useFuse"
 
 function Search() {
 
-  // This will create a new search index. Here we are using all of the default options, but the docs show other choices that can be used. 
-
-  const [index, setIndex] = useState(new Index({}));
-
-  //  Create state variables for query and results.
   const [query, setQuery] = useState("");
 
-  const [results, setResults] = useState([]);
-
-  //  When the component first loads, we need to iterate through data values and add each to the search index. 
-
-  useEffect(() => {
-    posts.forEach((item) => {
-      setIndex(index.add(item.id, item.title, item.description));
-    });
-  }, []);
-
-  //  When the query from the search input changes, we want to update the query state and thus the results to display. 
-
-  useEffect(() => {
-    setResults(index.search(query));
-  }, [query]);
-
-
-  const finalResult = results.map((result) => posts.find(item => item.id === result))
-
-
-
+  const result = searchWithFuse(query)
 
   return (<Popover.Root>
 
@@ -73,11 +46,14 @@ function Search() {
 
           {
 
-            finalResult.map(item => <div key={item.id} className="text-white my-2 py-2 bg-blue-400 dark:bg-gray-900 dark:hover:bg-blue-400 border-none rounded-md dark:text-white">
+            result.map(({ item }) => <div key={item?.id} className="text-white my-2 py-2 bg-blue-400 dark:bg-gray-900 dark:hover:bg-blue-400 border-none rounded-md dark:text-white">
               <Link href={`/read/${item?.title.trim().toLowerCase().split(" ").join("-")}`} className="relative inline-flex items-center rounded-lg w-full px-4 py-2 text-sm font-medium">
                 {item?.title}
               </Link>
             </div>)
+
+            //
+            //   result.map(item => <h1>{item.item.title} </h1>)
 
           }
 
