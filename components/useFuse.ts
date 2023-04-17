@@ -2,7 +2,7 @@ import Fuse from "fuse.js";
 import { posts } from "@/data/posts";
 
 const options = {
-  includeScore: true,
+  isCaseSensitive: true,
   keys: ['title', 'description', 'author']
 }
 const fuse = new Fuse(posts, options)
