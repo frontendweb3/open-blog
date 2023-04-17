@@ -16,7 +16,8 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
-    "flexsearch": "^0.7.31",
+    "flexsearch-ts": "^0.7.31",
+    "fuse.js": "^6.6.2",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -25,8 +26,8 @@
     "use-orama": "^0.1.7"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
-    "flowbite-typography": "^1.0.3",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.21",
     "react-icons": "^4.8.0",

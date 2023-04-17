@@ -1,4 +1,5 @@
 import Newsletter from "@/components/Newsletter";
+import { FaChevronLeft } from "react-icons/fa";
 import Link from "next/link";
 import Image from 'next/image';
 import { posts } from "@/data/posts";
@@ -39,9 +40,21 @@ function Read({ post }: { post: string }) {
   return (
     <>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <article className="mx-auto w-full max-w-3xl format format-xl sm:format-base  format-blue dark:format-invert">
-            <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
+        <div className="flex flex-col justify-between px-4 mx-auto max-w-screen-xl">
+
+          <article className="mx-auto w-full max-w-3xl prose lg:prose-xl prose-stone dark:prose-invert">
+
+            <div className="my-4 flex justify-between">
+              <Link className="text-xl flex flex-row items-center mb-6 no-underline" href={`/`}>
+                <FaChevronLeft /> Back
+              </Link>
+
+              <Link className="text-xl mb-6 no-underline" href={`/tags/${singlePost.tags[0].trim().toLowerCase().replaceAll(' ', '-')}`}>
+                #{singlePost.tags[0]}
+              </Link>
+            </div>
+
+            <h1 className="mb-4 mt-4 text-3xl font-extrabold text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
               {singlePost.title}
             </h1>
 
@@ -57,7 +70,7 @@ function Read({ post }: { post: string }) {
 
                   <Image height={40} width={40} className="mr-4 w-10 h-10 rounded-full" src={singlePost.image} alt={singlePost.title} />
 
-                  <Link href={`/authors/${singlePost.author.toLowerCase().trim().split(" ").join("-")}`} rel="author" className="text-xl font-bold text-gray-900 dark:text-white">{singlePost.author}</Link>
+                  <Link href={`/authors/${singlePost.author.toLowerCase().trim().split(" ").join("-")}`} rel="author" className="no-underline text-xl font-bold text-gray-900 dark:text-white">{singlePost.author}</Link>
 
                   <time className="text-base font-light text-gray-500 dark:text-gray-400 mx-1" dateTime={"2022-02-08".toString()} title="February 8th, 2022">
                     Feb. 8, 2022
