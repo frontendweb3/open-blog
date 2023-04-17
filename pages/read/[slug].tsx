@@ -70,7 +70,7 @@ function Read({ post }: { post: string }) {
 
                   <Image height={40} width={40} className="mr-4 w-10 h-10 rounded-full" src={singlePost.image} alt={singlePost.title} />
 
-                  <Link href={`/authors/${singlePost.author.toLowerCase().trim().split(" ").join("-")}`} rel="author" className="no-underline text-xl font-bold text-gray-900 dark:text-white">{singlePost.author}</Link>
+                  <Link href={`/author/${singlePost.author.toLowerCase().trim().split(" ").join("-")}`} rel="author" className="no-underline text-xl font-bold text-gray-900 dark:text-white">{singlePost.author}</Link>
 
                   <time className="text-base font-light text-gray-500 dark:text-gray-400 mx-1" dateTime={"2022-02-08".toString()} title="February 8th, 2022">
                     Feb. 8, 2022
