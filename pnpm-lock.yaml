@@ -1,9 +1,6 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@orama/orama':
-    specifier: 1.0.0-beta.8
-    version: 1.0.0-beta.8
   '@radix-ui/react-popover':
     specifier: ^1.0.5
     version: 1.0.5(@types/react@18.0.28)(react-dom@18.2.0)(react@18.2.0)
