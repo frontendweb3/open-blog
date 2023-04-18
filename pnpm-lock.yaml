@@ -22,9 +22,6 @@ dependencies:
   eslint-config-next:
     specifier: 13.2.3
     version: 13.2.3(eslint@8.35.0)(typescript@4.9.5)
-  flexsearch-ts:
-    specifier: ^0.7.31
-    version: 0.7.31
   fuse.js:
     specifier: ^6.6.2
     version: 6.6.2
@@ -1487,10 +1484,6 @@ packages:
 
   /flatted@3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
-    dev: false
-
-  /flexsearch-ts@0.7.31:
-    resolution: {integrity: sha512-Z3geBbHiPw/JALe/thvxTd1LAgDcUNvQuHWGjhO4lG7gOR5IVVPsyS8tRt/qmme9HgXj3zdtHC4yJ3anGW1Xmw==}
     dev: false
 
   /flexsearch@0.6.32:
