@@ -5,7 +5,7 @@ function Card({ item }: { item: Posts }) {
 
   return (
 
-    <div className="max-w-full bg-white dark:bg-gray-800">
+    <div className="max-w-full m-2 sm:m-0 bg-gray-100 shadow-sm dark:bg-gray-800">
 
       <Image className="rounded-lg p-3" width={1000} height={324} src={item.image} alt=" demo image " />
 
