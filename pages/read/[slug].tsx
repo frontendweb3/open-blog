@@ -9,7 +9,6 @@ export async function getStaticProps(context: { params: { slug: string } }) {
 
   const { slug } = context.params
 
-
   for (const item of posts) {
     if (item.title.toLowerCase().trim().split(" ").join("-") === slug) {
       return {
@@ -44,7 +43,8 @@ function Read({ post }: { post: string }) {
 
           <article className="mx-auto w-full max-w-3xl prose lg:prose-xl prose-stone dark:prose-invert">
 
-            <div className="my-4 flex justify-between">
+            <div className="my-4 flex items-center justify-between">
+             
               <Link className="text-xl flex flex-row items-center mb-6 no-underline" href={`/`}>
                 <FaChevronLeft /> Back
               </Link>
