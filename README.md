@@ -1,8 +1,21 @@
-OpenBlog is open source template is design and built with nextjs, tailwind CSS and Markdown. 
+OpenBlog is open source template is design and built with nextjs and tailwind CSS. 
 
 ## Getting Started
 
-First, run the development server:
+```bash
+# clone the repository
+git clone https://github.com/frontendweb3/open-blog.git
+# change the directory
+cd open-blog
+# install packages with pnpm or npm or yarn.
+pnpm install
+# or
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -15,8 +28,8 @@ pnpm dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Folder Structure
+
 ```bash
-rajdeepsingh@officialrajdeepsingh:~/frontendweb3/openblog$ tree -I node_modules
 .
 ├── components
 │   ├── Card.tsx
@@ -68,6 +81,4 @@ rajdeepsingh@officialrajdeepsingh:~/frontendweb3/openblog$ tree -I node_modules
 ├── tailwind.config.js
 ├── tsconfig.json
 └── type.d.ts
-
-9 directories, 41 files
 ```
