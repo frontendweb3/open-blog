@@ -11,6 +11,39 @@ export function GetPost(slug: string) {
   return allPosts.find((post) => post.slug === slug)
 }
 
+// Author 
+export async function GetAuthorsPost(slug: string) {
+
+  const AuthorList: Posts[] = []
+
+  allPosts.map((post) => {
+    if (post.author !== undefined) {
+      if (post.author.toLowerCase().trim().split(" ").join("-") === slug) {
+        AuthorList.push(post)
+      }
+    }
+  })
+
+  return AuthorList
+}
+
+// Author Page
+export async function GetAuthors() {
+
+  const AuthorList: { slug: string; }[] = []
+
+  allPosts.map((post) => {
+    if (post.author !== undefined) {
+      let formatAuthor = post.author.toLowerCase().trim().split(" ").join("-")
+      if (formatAuthor) {
+        AuthorList.push({ slug: formatAuthor })
+      }
+    }
+  })
+  return AuthorList
+}
+
+
 // Tag Page
 export async function GetTagsPost(slug: string) {
 
