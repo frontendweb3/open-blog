@@ -1,35 +1,39 @@
 import Image from "next/image"
 import Link from "next/link";
-import { type Posts } from "@/type";
-function Card({ item }: { item: Posts }) {
+import type { Posts } from "@/type";
+import {
+  Card as CardBox,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+export function Card({ item }: { item: Posts }) {
 
   return (
-
-    <div className="max-w-full m-2 sm:m-0 bg-gray-100 shadow-sm dark:bg-gray-800">
-
-      <Image className="rounded-lg p-3" width={1000} height={324} src={item.image} alt=" demo image " />
-
-      <div className="p-3">
-
-        <div className="flex mb-3">
-
-          <p className="text-sm text-gray-500 dark:text-gray-400"> Mar 10, 2023 </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mx-1"> , </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400"> 5 min read </p>
-
+    <CardBox className="max-w-full mt-10 rounded-sm">
+      <CardHeader>
+        <div className="relative h-44">
+          <Image
+            alt={item.title}
+            src={item.image}
+            fill
+            style={{
+              objectFit: 'cover', // cover, contain, none
+            }}
+          />
         </div>
-
-
-        <Link className="text-lg " href={`/read/${item.title.toLowerCase().trim().split(" ").join("-")}`}>
-          {item.title}
+      </CardHeader>
+      <CardContent>
+        <div className="flex mb-3">
+          <p className="text-sm text-primary">Published on Mar 10, 2023 </p>
+        </div>
+        <Link className="text-lg" href={`/read/${item.slug}`}>
+          <CardTitle className="scroll-m-20 text-md font-extrabold tracking-tight lg:text-1xl">{item.title}</CardTitle>
         </Link>
-
-      </div>
-
-    </div>
-
+        <CardDescription className="mt-4 text-muted-foreground md:mb-4 lg:mt-6 truncate">{item.description} </CardDescription>
+      </CardContent>
+    </CardBox>
   )
-
 }
-
-export default Card
