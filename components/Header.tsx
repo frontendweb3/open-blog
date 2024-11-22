@@ -1,57 +1,43 @@
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSun, FaRegMoon } from "react-icons/fa";
-import { useTheme } from 'next-themes'
-import Link from "next/link";
-import Search from "@/components/Search";
+"use client"
 
-function Header() {
+import * as React from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Disc, Lock, Search } from "lucide-react"
+import { ThemeToggle } from "@/components/theme/theme-toggle"
+import { Github, Facebook, Instagram, Twitter, Linkedin } from "@/components/icons"
 
-  const { theme, setTheme } = useTheme()
 
+export function Header() {
   return (
-    <header className="not-prose px-2 sm:px-4 py-2.5 w-full">
-
-      <div className="container flex flex-wrap items-center justify-between mx-auto">
-
-        <Link href="/" className="mx-auto block font-semibold dark:text-white">Open Blog </Link>
-
-
-        <ul className="mx-auto flex flex-wrap p-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-
-
-          <li className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
-            <Search />
-          </li>
-
-          <li>
-            <Link href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white" aria-current="page">
-              <FaTwitter />
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white">
-              <FaLinkedin />
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white">
-              <FaInstagram />
-            </Link>
-          </li>
-          <li >
-            <button className="block py-2 pl-3 pr-4 rounded md:p-0" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-              {theme === "dark" ? <FaSun /> : <FaRegMoon />}
-            </button>
-          </li>
-        </ul>
-
+    <header className="px-2 py-3 sm:px-4 w-full z-20 border-b border-gray-200">
+      <div className="container flex gap-4 flex-wrap items-center justify-around md:justify-between mx-auto">
+        <Link href="/" className="flex items-center">
+          <Button variant="link"> <Disc /> <span className="self-center text-2xl font-semibold whitespace-nowrap">Open Blog</span> </Button>
+        </Link>
+        <div className="flex flex-row flex-wrap">
+          <Link href={"/search"}>
+            <Button variant="link"> <Search /> </Button>
+          </Link>
+          <Link href={"#"}>
+            <Button variant="link"> <Facebook /> </Button>
+          </Link>
+          <Link href={"#"}>
+            <Button variant="link"> <Instagram /> </Button>
+          </Link>
+          <Link href={"https://x.com/FrontendWeb3"}>
+            <Button variant="link"> <Twitter /> </Button>
+          </Link>
+          <Link href={"https://www.linkedin.com/company/frontendweb"}>
+            <Button variant="link"> <Linkedin /> </Button>
+          </Link>
+          <Link target="_blank" href={"https://github.com/frontendweb3/open-blog"}>
+            <Button variant="link"> <Github /> </Button>
+          </Link>
+          <Button variant="link"> <Lock /> Login </Button>
+          <ThemeToggle />
+        </div>
       </div>
-
     </header>
   )
-
 }
-export default Header
