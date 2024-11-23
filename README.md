@@ -1,84 +1,57 @@
-OpenBlog is open source template is design and built with nextjs and tailwind CSS. 
+The Open Blog is a open source template is design and built with Next.js 15, Shadcn UI and tailwind CSS. 
 
-## Getting Started
+Take a look at the demo of the Minimalist template!
+
+## Demo
+
+[![Demo](/.github/open-blog.png)](https://open-blog-beta.vercel.app/)
+
+## Our Template Stack
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Shadcn UI](https://img.shields.io/badge/Shadcn/ui-white.svg?&logo=data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+c2hhZGNuL3VpPC90aXRsZT48cGF0aCBkPSJNMjIuMjE5IDExLjc4NCAxMS43ODQgMjIuMjE5Yy0uNDA3LjQwNy0uNDA3IDEuMDY4IDAgMS40NzYuNDA3LjQwNyAxLjA2OC40MDcgMS40NzYgMEwyMy42OTUgMTMuMjZjLjQwNy0uNDA4LjQwNy0xLjA2OSAwLTEuNDc2LS40MDgtLjQwNy0xLjA2OS0uNDA3LTEuNDc2IDBaTTIwLjEzMi4zMDUuMzA1IDIwLjEzMmMtLjQwNy40MDctLjQwNyAxLjA2OCAwIDEuNDc2LjQwOC40MDcgMS4wNjkuNDA3IDEuNDc2IDBMMjEuNjA4IDEuNzgxYy40MDctLjQwNy40MDctMS4wNjggMC0xLjQ3Ni0uNDA4LS40MDctMS4wNjktLjQwNy0xLjQ3NiAwWiIvPjwvc3ZnPg==)
+
+
+## Clone Repository
+
+First, download the Next.js open blog template code from the GitHub repository using the following command:
 
 ```bash
-# clone the repository
-git clone https://github.com/frontendweb3/open-blog.git
-# change the directory
-cd open-blog
-# install packages with pnpm or npm or yarn.
-pnpm install
-# or
-npm install
-# or
-yarn install
+git clone git clone https://github.com/frontendweb3/open-blog.git
 ```
+Then follow the below **steps**:
 
-Then, run the development server:
+```markdown
+# step 1
+cd open-blog
 
-```bash
-npm run dev
-# or
+# step 2
+pnpm install
+#  or 
+yarn install
+
+# step 3
 yarn dev
-# or
+#    or
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Folder Structure
+### Our primary stack for the Open Blog template includes:
 
-```bash
-.
-├── components
-│   ├── Card.tsx
-│   ├── Footer.tsx
-│   ├── Header.tsx
-│   ├── Layout.tsx
-│   ├── Newsletter.tsx
-│   ├── Pagination.tsx
-│   ├── Search.tsx
-│   └── useFuse.ts
-├── data
-│   └── posts.ts
-├── next.config.js
-├── next-env.d.ts
-├── package.json
-├── pages
-│   ├── 404.tsx
-│   ├── _app.tsx
-│   ├── authors
-│   ├── _document.tsx
-│   ├── index.tsx
-│   ├── read
-│   │   └── [slug].tsx
-│   └── tags
-│       └── [slug].tsx
-├── pnpm-lock.yaml
-├── postcss.config.js
-├── public
-│   ├── favicon.ico
-│   ├── images
-│   │   ├── android.jpg
-│   │   ├── blog-2.jpg
-│   │   ├── camera.jpg
-│   │   ├── computer.jpg
-│   │   ├── health.jpg
-│   │   ├── ios.jpg
-│   │   ├── photographer.jpg
-│   │   ├── smartphone.jpg
-│   │   ├── software-developer.jpg
-│   │   ├── technology.jpg
-│   │   └── vegetables.jpg
-│   ├── moon.jpg
-│   ├── next.svg
-│   ├── thirteen.svg
-│   └── vercel.svg
-├── README.md
-├── styles
-│   └── globals.css
-├── tailwind.config.js
-├── tsconfig.json
-└── type.d.ts
-```
+1. Next.js
+2. TypeScript
+3. PNPM
+4. Shadcn UI
+5. Tailwind CSS
+
+## Additional packages:
+
+1. Lucide icons
+2. @tailwindcss/typography
+3. fuse.js
+
+After downloading, open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the result.

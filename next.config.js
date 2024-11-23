@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['flowbite.s3.amazonaws.com', 'flowbite.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flowbite.s3.amazonaws.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'flowbite.com',
+      },
+    ],
   },
 }
 

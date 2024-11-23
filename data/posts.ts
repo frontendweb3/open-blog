@@ -1,4 +1,4 @@
-export const posts: Array<{ id: string; title: string; description: string; date: string; tags: string[]; category: string[]; image: string; author: string; }> = [
+export const posts: Array<{ id: string; title: string; description: string; date: string; tags: string[]; category: string[]; image: string; author: string; slug: string }> = [
   {
     id: "1X2",
     title: "5 Reasons Why You Shouldnt Learn Photography On Your Own",
@@ -7,7 +7,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Photography"],
     category: ["Photography"],
     image: "/images/camera.jpg",
-    author: "Jeanne Ballard"
+    author: "Jeanne Ballard",
+    slug: "5-reasons-why-you-shouldnt-learn-photography-on-your-own"
   },
   {
     id: "1X3",
@@ -17,7 +18,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Programming", "Python", "Tips"],
     category: ["Programming"],
     image: "/images/software-developer.jpg",
-    author: "Jeanne Ballard"
+    author: "Jeanne Ballard",
+    slug: "7-useful-tips-from-python-experts-in-programming"
   },
   {
     id: "1X4",
@@ -27,7 +29,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Advantage", "Computer Science", "Tech"],
     category: ["Computer Science"],
     image: "/images/computer.jpg",
-    author: "Emilio Tate"
+    author: "Emilio Tate",
+    slug: "7-ways-to-use-computer-science-to-your-advantage"
   },
   {
     id: "1X5",
@@ -37,7 +40,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Health", "Likely", "Didn't Know"],
     category: ["Health"],
     image: "/images/vegetables.jpg",
-    author: "Curtis Lopez"
+    author: "Curtis Lopez",
+    slug: "10-things-you-most-likely-didnt-know-about-health"
   },
   {
     id: "1X6",
@@ -47,7 +51,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Health", "Misconceptions"],
     category: ["Health"],
     image: "/images/health.jpg",
-    author: "DR. Jeffery Schwartz"
+    author: "DR. Jeffery Schwartz",
+    slug: "15-common-misconceptions-about-health"
   },
   {
     id: "1X7",
@@ -57,7 +62,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["15 facts", "Photography", "Jeanne Ballard facts"],
     category: ["Photography"],
     image: "/images/photographer.jpg",
-    author: "Jeanne Ballard"
+    author: "Jeanne Ballard",
+    slug: "15-facts-you-never-knew-about-photography"
   },
   {
     id: "1X8",
@@ -67,7 +73,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Blog", "five", "Secrets"],
     category: ["Blog"],
     image: "/images/blog-2.jpg",
-    author: "Cameron Stewart"
+    author: "Cameron Stewart",
+    slug: "the-five-secrets-you-will-never-know-about-blogging"
   },
   {
     id: "1X9",
@@ -77,7 +84,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Business Strategies", "Business"],
     category: ["Computer Science"],
     image: "/images/technology.jpg",
-    author: "Emilio Tate"
+    author: "Emilio Tate",
+    slug: "how-computer-science-is-going-to-change-your-business-strategies"
   },
   {
     id: "1X10",
@@ -87,7 +95,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Photography", "Photo"],
     category: ["Photography"],
     image: "/images/smartphone.jpg",
-    author: "Ashley Paul"
+    author: "Ashley Paul",
+    slug: "photography-is-not-rocket-science-learn-them-now"
   },
   {
     id: "1X12",
@@ -97,7 +106,8 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Android", "Smart Phone", "Facts"],
     category: ["Smart Phone"],
     image: "/images/ios.jpg",
-    author: "Hannah Rivera"
+    author: "Hannah Rivera",
+    slug: "seven-mind-blowing-facts-about-smart-phone"
   },
   {
     id: "1X13",
@@ -107,6 +117,7 @@ export const posts: Array<{ id: string; title: string; description: string; date
     tags: ["Android", "Android Features"],
     category: ["Android"],
     image: "/images/android.jpg",
-    author: "Linda Pittman"
+    author: "Linda Pittman",
+    slug: "understand-the-android-features-before-you-regret"
   },
 ]
