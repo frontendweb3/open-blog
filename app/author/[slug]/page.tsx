@@ -2,6 +2,7 @@ import { Card } from "@/components/Card";
 import { GetAuthors, GetAuthorsPost, } from "@/data";
 import type { Posts } from "@/type";
 import type { Metadata } from 'next'
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
@@ -17,6 +18,9 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const slug = (await params).slug
   const posts = await GetAuthorsPost(slug)
+  if (posts.length === 0) {
+    notFound()
+  }
   return (
     <>
       <div className="container mt-16 px-4 mx-auto">

@@ -1,4 +1,4 @@
-import {Newsletter} from "@/components/Newsletter";
+import { Newsletter } from "@/components/Newsletter";
 import { ChevronLeft, Tag, UserRoundPen } from "lucide-react";
 import Link from "next/link";
 import Image from 'next/image';
@@ -6,6 +6,7 @@ import { posts as allPosts } from "@/data/posts";
 import { Button } from "@/components/ui/button"
 import { GetPost } from "@/data";
 import dayjs from "dayjs";
+import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post.slug }))
 
@@ -14,7 +15,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const slug = (await params).slug
 
   const post = GetPost(slug)
-  if (!post) throw new Error(`Post not found for slug: ${slug}`)
+
+  if (!post) {
+    notFound()
+  }
 
   return { title: post.title }
 
@@ -24,7 +28,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const slug = (await params).slug
   const post = GetPost(slug)
 
-  if (!post) throw new Error(`Post not found for slug: ${slug}`)
+  if (!post) {
+    notFound()
+  }
 
   return (
     <>
