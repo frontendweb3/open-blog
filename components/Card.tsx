@@ -12,19 +12,24 @@ import {
 export function Card({ item }: { item: Posts }) {
 
   return (
-    <CardBox className="max-w-full mt-10 rounded-sm">
+    <CardBox className="mt-10 rounded-sm">
       <CardHeader>
-        <div className="relative h-44">
-          <Image
-            alt={item.title}
-            src={item.image}
-            fill
-            style={{
-              objectFit: 'cover', // cover, contain, none
-            }}
-          />
-        </div>
+
+        {
+          item.image && <div className="relative h-44">
+            <Image
+              alt={item.title}
+              src={item.image}
+              fill
+              loading='lazy'
+              style={{
+                objectFit: 'cover', // cover, contain, none
+              }}
+            />
+          </div>
+        }
       </CardHeader>
+
       <CardContent>
         <div className="flex mb-3">
           <p className="text-sm text-primary">Published on Mar 10, 2023 </p>
