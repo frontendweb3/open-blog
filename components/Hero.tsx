@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="py-32">
       <div className="container text-center">
-        <div className="mx-auto flex max-w-screen-lg flex-col gap-6">
+        <div className="mx-auto flex max-w-(--breakpoint-lg) flex-col gap-6">
           <h1 className="text-3xl font-extrabold lg:text-6xl">A Collection of stories related to Computer Science, Photography, and Health.</h1>
           <p className="text-balance text-muted-foreground lg:text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et erat non dui semper tristique. Curabitur pharetra velit quis vulputate iaculis.</p>

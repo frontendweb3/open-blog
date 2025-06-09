@@ -14,8 +14,8 @@ export default function GlobalError({
     <html>
       <body>
         <section className="dark:bg-gray-900 my-16">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div className="mx-auto max-w-screen-sm text-center">
+          <div className="py-8 px-4 mx-auto max-w-(--breakpoint-xl) lg:py-16 lg:px-6">
+            <div className="mx-auto max-w-(--breakpoint-sm) text-center">
               <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500"> {error.name} </h1>
               <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">{error.message}</p>
               <Link href={"/"}>

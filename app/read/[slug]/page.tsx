@@ -46,7 +46,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </Link>
         </div>
 
-        <div className="relative mt-16 h-[28rem]">
+        <div className="relative mt-16 h-112">
           <Image
             alt={post.title}
             src={post.image}
