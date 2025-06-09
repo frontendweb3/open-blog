@@ -37,7 +37,7 @@ export function Card({ item }: { item: Posts }) {
         <Link className="text-lg" href={`/read/${item.slug}`}>
           <CardTitle className="scroll-m-20 text-md font-extrabold tracking-tight lg:text-1xl">{item.title}</CardTitle>
         </Link>
-        <CardDescription className="mt-4 text-muted-foreground md:mb-4 lg:mt-6 truncate">{item.description} </CardDescription>
+        <CardDescription className="mt-4 text-primary md:mb-4 lg:mt-6 truncate">{item.description} </CardDescription>
       </CardContent>
     </CardBox>
   )
