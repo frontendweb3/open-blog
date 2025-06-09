@@ -3,8 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { ThemeProvider } from "@/components/theme/theme-provider"
-
+import { ThemeProvider } from "@/components/theme/theme-provider";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -18,7 +17,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Home | Open Blog",
-  description: "The Open Blog is a open source template is design and built with Next.js 15, Shadcn UI and tailwind CSS.",
+  description:
+    "The Open Blog is a open source template is design and built with Next.js 15, Shadcn UI and tailwind CSS.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -39,7 +41,6 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
-
       </body>
     </html>
   );
