@@ -24,7 +24,9 @@ export default function Search() {
         <Label htmlFor="default-search">Search Your Articles</Label>
         <Input className="rounded-sm" onChange={(event) => setQuery(event.target.value)} type="text" id="default-search" required={true} placeholder=" Type your keywork" />
       </div>
-      {query && <div className="container items-center gap-4 mt-16 capitalize"> <h1> Result {query} </h1> </div>}
+      {query && <div className="container items-start gap-4 mt-16 capitalize">
+        <h2 className="font-manrope text-5xl font-bold"> {query} </h2>
+       </div>}
       <div className="container mt-24 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {allPosts.map((post) => <Card key={post.item.id} item={post.item} />)}
       </div>
