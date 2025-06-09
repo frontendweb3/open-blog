@@ -12,9 +12,11 @@ export function Header() {
   return (
     <header className="px-2 py-3 sm:px-4 w-full z-20 border-b border-gray-200">
       <div className="container flex gap-4 flex-wrap items-center justify-around md:justify-between mx-auto">
-        <Link href="/" className="flex items-center">
-          <Button variant="link"> <Disc /> <span className="self-center text-2xl font-semibold whitespace-nowrap">Open Blog</span> </Button>
-        </Link>
+        <Button variant="link" asChild>
+          <Link href="/" className="flex items-center">
+            <><Disc size={6} /> <span className="self-center text-2xl font-semibold whitespace-nowrap">Open Blog</span></>
+          </Link>
+        </Button>
         <div className="flex flex-row flex-wrap">
           <Link href={"/search"}>
             <Button variant="link"> <Search /> </Button>
@@ -38,6 +40,6 @@ export function Header() {
           <ThemeToggle />
         </div>
       </div>
-    </header>
+    </header >
   )
 }
