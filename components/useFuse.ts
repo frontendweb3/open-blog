@@ -3,16 +3,14 @@ import { posts } from "@/data/posts";
 
 const options = {
   isCaseSensitive: true,
-  keys: ['title', 'description', 'author']
-}
-const fuse = new Fuse(posts, options)
+  keys: ["title", "description", "author"],
+};
+const fuse = new Fuse(posts, options);
 
 export function searchWithFuse(query: string) {
   if (!query) {
     return [];
   }
 
-  return fuse.search(query)
+  return fuse.search(query);
 }
-
-

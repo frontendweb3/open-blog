@@ -1,81 +1,75 @@
-import { posts as allPosts } from "@/data/posts"
+import { posts as allPosts } from "@/data/posts";
 import type { Posts } from "@/type";
 
 // Home Page
 export function GetAllPosts() {
-  return allPosts
+  return allPosts;
 }
 
-// Read page 
+// Read page
 export function GetPost(slug: string) {
-  return allPosts.find((post) => post.slug === slug)
+  return allPosts.find((post) => post.slug === slug);
 }
 
-// Author 
+// Author
 export async function GetAuthorsPost(slug: string) {
-
-  const AuthorList: Posts[] = []
+  const AuthorList: Posts[] = [];
 
   allPosts.map((post) => {
     if (post.author !== undefined) {
       if (post.author.toLowerCase().trim().split(" ").join("-") === slug) {
-        AuthorList.push(post)
+        AuthorList.push(post);
       }
     }
-  })
+  });
 
-  return AuthorList
+  return AuthorList;
 }
 
 // Author Page
 export async function GetAuthors() {
-
-  const AuthorList: { slug: string; }[] = []
+  const AuthorList: { slug: string }[] = [];
 
   allPosts.map((post) => {
     if (post.author !== undefined) {
-      let formatAuthor = post.author.toLowerCase().trim().split(" ").join("-")
+      let formatAuthor = post.author.toLowerCase().trim().split(" ").join("-");
       if (formatAuthor) {
-        AuthorList.push({ slug: formatAuthor })
+        AuthorList.push({ slug: formatAuthor });
       }
     }
-  })
-  return AuthorList
+  });
+  return AuthorList;
 }
-
 
 // Tag Page
 export async function GetTagsPost(slug: string) {
-
-  const TagPosts: Posts[] = []
+  const TagPosts: Posts[] = [];
 
   allPosts.map((post) => {
     if (post.tags !== undefined) {
-      post.tags.filter(tag => {
+      post.tags.filter((tag) => {
         if (tag.toLowerCase().trim().split(" ").join("-") === slug) {
-          TagPosts.push(post)
+          TagPosts.push(post);
         }
-      })
+      });
     }
-  })
+  });
 
-  return TagPosts
-
+  return TagPosts;
 }
 // Tag Page
 export async function GetTags() {
-
-  const TagsList: { slug: string; }[] = []
+  const TagsList: { slug: string }[] = [];
 
   allPosts.map((post) => {
     if (post.tags !== undefined) {
-      post.tags.filter(tag => {
-        let formatTag = tag.toLowerCase().trim().split(" ").join("-")
+      post.tags.filter((tag) => {
+        let formatTag = tag.toLowerCase().trim().split(" ").join("-");
         if (formatTag) {
-          TagsList.push({ slug: formatTag })
+          TagsList.push({ slug: formatTag });
         }
-      })
+      });
     }
-  })
-  return TagsList
+  });
+  return TagsList;
 }

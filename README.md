@@ -1,4 +1,4 @@
-The Open Blog is a open source template is design and built with Next.js 15, Shadcn UI and tailwind CSS. 
+The Open Blog is a open source template is design and built with Next.js 15, Shadcn UI and tailwind CSS.
 
 Take a look at the demo of the Minimalist template!
 
@@ -26,7 +26,6 @@ Take a look at the demo of the Minimalist template!
 
 ![Card List](./.github/open-blog-card-list.png)
 
-
 ## Clone Repository
 
 First, download the Next.js open blog template code from the GitHub repository using the following command:
@@ -34,23 +33,30 @@ First, download the Next.js open blog template code from the GitHub repository u
 ```bash
 git clone git clone https://github.com/frontendweb3/open-blog.git
 ```
+
 Then follow the below **steps**:
 
 ```markdown
 # step 1
+
 cd open-blog
 
 # step 2
+
 pnpm install
-#  or 
+
+# or
+
 yarn install
 
 # step 3
+
 yarn dev
-#    or
+
+# or
+
 pnpm dev
 ```
-
 
 ### Our primary stack for the Open Blog template includes:
 

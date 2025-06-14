@@ -1,35 +1,63 @@
 import Link from "next/link";
-import { Github, Facebook, Instagram, Twitter, Linkedin } from "@/components/icons"
-import * as React from "react"
-import { Button } from "@/components/ui/button"
-
+import {
+  Github,
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+} from "@/components/icons";
+import * as React from "react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
-
   return (
-
-    <footer className="px-2 sm:px-4 py-2.5 w-full border-t border-border">
-      <div className="container flex gap-4 flex-wrap items-center justify-around md:justify-between mx-auto">
+    <footer className="w-full border-t border-border px-2 py-2.5 sm:px-4">
+      <div className="container mx-auto flex flex-wrap items-center justify-around gap-4 md:justify-between">
         <div className="flex flex-row flex-wrap">
-          <Link href={"#"}>
-            <Button variant="link"> <Github /> </Button>
-          </Link>
-          <Link href={"#"}>
-            <Button variant="link"> <Facebook /> </Button>
-          </Link>
-          <Link href={"#"}>
-            <Button variant="link"> <Instagram /> </Button>
-          </Link>
-          <Link href={"#"}>
-            <Button variant="link"> <Twitter /> </Button>
-          </Link>
-          <Link href={"#"}>
-            <Button variant="link"> <Linkedin /> </Button>
-          </Link>
+          <Button variant="link" asChild>
+            <Link href={"#"}>
+              <Facebook />
+            </Link>
+          </Button>
+
+          <Button variant="link" asChild>
+            <Link href={"#"}>
+              {" "}
+              <Instagram />{" "}
+            </Link>
+          </Button>
+
+          <Button variant="link" asChild>
+            <Link href={"https://x.com/FrontendWeb3"}>
+              <Twitter />{" "}
+            </Link>
+          </Button>
+
+          <Button variant="link" asChild>
+            <Link href={"https://www.linkedin.com/company/frontendweb"}>
+              {" "}
+              <Linkedin />{" "}
+            </Link>
+          </Button>
+
+          <Button variant="link" asChild>
+            <Link
+              target="_blank"
+              href={"https://github.com/frontendweb3/open-blog"}
+            >
+              {" "}
+              <Github />{" "}
+            </Link>
+          </Button>
         </div>
-        <Link href="https://github.com/frontendweb3" className="text-sm font-semibold whitespace-nowrap"> Copyright By Frontend Web </Link>
+        <Link
+          href="https://github.com/frontendweb3"
+          className="text-sm font-light whitespace-nowrap"
+        >
+          {" "}
+          © Copyright by Frontend Web{" "}
+        </Link>
       </div>
     </footer>
-
-  )
+  );
 }

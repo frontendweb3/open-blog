@@ -1,44 +1,46 @@
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import type { Posts } from "@/type";
 import {
-  Card as CardBox,
+  Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-
-export function Card({ item }: { item: Posts }) {
+} from "@/components/ui/card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { ChevronRight } from "lucide-react";
+import dayjs from "dayjs";
+export function BlogCard({ item }: { item: Posts }) {
+  let getDate = dayjs(item.date).format("DD MMMM, YYYY");
 
   return (
-    <CardBox className="mt-10 rounded-sm">
-      <CardHeader>
-
-        {
-          item.image && <div className="relative h-44">
-            <Image
-              alt={item.title}
-              src={item.image}
-              fill
-              loading='lazy'
-              style={{
-                objectFit: 'cover', // cover, contain, none
-              }}
-            />
-          </div>
-        }
-      </CardHeader>
-
-      <CardContent>
-        <div className="flex mb-3">
-          <p className="text-sm text-primary">Published on Mar 10, 2023 </p>
-        </div>
-        <Link className="text-lg" href={`/read/${item.slug}`}>
-          <CardTitle className="scroll-m-20 text-md font-extrabold tracking-tight lg:text-1xl">{item.title}</CardTitle>
+    <Card
+      key={item.id}
+      className="item-center rounded-sm transition-shadow hover:shadow-lg"
+    >
+      <CardContent className="item-center p-6">
+        <Link href={`/read/${item.slug}`}>
+          <CardTitle className="mb-2 text-lg font-semibold text-foreground">
+            {item.title}
+          </CardTitle>
         </Link>
-        <CardDescription className="mt-4 text-primary md:mb-4 lg:mt-6 truncate">{item.description} </CardDescription>
+        <Link href={`/read/${item.slug}`}>
+          <CardDescription className="mb-4 text-sm text-card-foreground">
+            {item.description}
+          </CardDescription>
+        </Link>
+        <div className="flex items-center justify-between text-sm text-card-foreground">
+          <div className="flex items-center gap-2">
+            <span>{item.author}</span>
+          </div>
+          <time className="font-medium" title={item.date}>
+            {" "}
+            {getDate}
+          </time>
+        </div>
       </CardContent>
-    </CardBox>
-  )
+    </Card>
+  );
 }
