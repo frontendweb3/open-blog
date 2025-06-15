@@ -18,7 +18,7 @@ export function Hero() {
           </p>
         </div>
         <Button size="lg" variant={"outline"} className="mt-10" asChild>
-          <Link href={"#"}>
+          <Link href={"#latest-article"}>
             Explore All Posts <ArrowRight className="ml-2 size-4" />
           </Link>
         </Button>
