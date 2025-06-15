@@ -42,7 +42,10 @@ export function Header() {
           </Button>
 
           <Button variant="link" asChild>
-            <Link target="_blank" href={"https://github.com/frontendweb3"}>
+            <Link
+              target="_blank"
+              href={"https://github.com/frontendweb3/open-blog"}
+            >
               {" "}
               <Github />{" "}
             </Link>
