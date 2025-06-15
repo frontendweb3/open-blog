@@ -1,4 +1,4 @@
-import { Card } from "@/components/Card";
+import { BlogCard } from "@/components/Card";
 import { GetTags, GetTagsPost } from "@/data";
 import type { Posts } from "@/type";
 import type { Metadata } from "next";
@@ -29,17 +29,16 @@ export default async function Page({
   }
   return (
     <>
-      <div className="container mx-auto mt-16 px-4">
-        <h2 className="text-2xl font-bold capitalize">
+      <section className="mx-auto my-8 max-w-6xl py-10">
+        <h2 className="px-4 py-2 text-xl font-bold text-white transition">
           Articles Related to {slug}
         </h2>
-      </div>
-
-      <main className="container mx-auto my-12 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-3 lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-4">
+      </section>
+      <div className="container mt-12 mb-20 grid grid-cols-1 gap-6 sm:grid-cols-2">
         {posts.map((item: Posts) => (
-          <Card key={item.id} item={item} />
+          <BlogCard key={item.id} item={item} />
         ))}
-      </main>
+      </div>
     </>
   );
 }
