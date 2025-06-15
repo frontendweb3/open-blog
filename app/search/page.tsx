@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useDeferredValue, useState } from "react";
 import { BlogCard } from "@/components/Card";
 import { searchWithFuse } from "@/components/useFuse";
 import { Input } from "@/components/ui/input";
@@ -14,8 +14,9 @@ interface TypeResult {
 
 export default function Search() {
   const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
 
-  const allPosts: TypeResult[] = searchWithFuse(query);
+  const allPosts: TypeResult[] = searchWithFuse(deferredQuery);
 
   return (
     <section className="py-32">
@@ -31,12 +32,15 @@ export default function Search() {
         />
       </div>
       {query && (
-        <div className="container mt-16 items-start gap-4 capitalize">
-          <h2 className="font-manrope text-5xl font-bold"> {query} </h2>
-        </div>
+        <section className="mx-auto my-8 max-w-6xl py-10">
+          <h2 className="px-4 py-2 text-xl font-bold capitalize transition">
+            {" "}
+            {query}
+          </h2>
+        </section>
       )}
 
-      <div className="container grid grid-cols-1 p-5">
+      <div className="container grid grid-cols-1 gap-6 sm:grid-cols-2">
         {allPosts.map((post) => (
           <BlogCard key={post.item.id} item={post.item} />
         ))}
