@@ -10,11 +10,11 @@ Take a look at the demo of the Minimalist template!
 
 ## Our Template Stack
 
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Shadcn UI](https://img.shields.io/badge/Shadcn/ui-white.svg?&logo=data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+c2hhZGNuL3VpPC90aXRsZT48cGF0aCBkPSJNMjIuMjE5IDExLjc4NCAxMS43ODQgMjIuMjE5Yy0uNDA3LjQwNy0uNDA3IDEuMDY4IDAgMS40NzYuNDA3LjQwNyAxLjA2OC40MDcgMS40NzYgMEwyMy42OTUgMTMuMjZjLjQwNy0uNDA4LjQwNy0xLjA2OSAwLTEuNDc2LS40MDgtLjQwNy0xLjA2OS0uNDA3LTEuNDc2IDBaTTIwLjEzMi4zMDUuMzA1IDIwLjEzMmMtLjQwNy40MDctLjQwNyAxLjA2OCAwIDEuNDc2LjQwOC40MDcgMS4wNjkuNDA3IDEuNDc2IDBMMjEuNjA4IDEuNzgxYy40MDctLjQwNy40MDctMS4wNjggMC0xLjQ3Ni0uNDA4LS40MDctMS4wNjktLjQwNy0xLjQ3NiAwWiIvPjwvc3ZnPg==)
+- **Next.js**
+- **Tailwind CSS**
+- **TypeScript**
+- **Rest API**
+- **Shadcn UI**
 
 ## Pictures
 
