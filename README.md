@@ -1,12 +1,12 @@
 # Open Blog
 
-The Open Blog is a open source template is design and built with Next.js 15, Rest API, Shadcn UI and tailwind CSS.
+The Open Blog is an open-source blogging template created with Next.js 15, TypeScript, a Rest API, Shadcn UI, and Tailwind CSS.
 
-Take a look at the demo of the Minimalist template!
+**Check out the demo of the Minimalist template.**
 
 ## Demo
 
-[![Demo](/.github/open-blog-demo.gif)](https://open-blog-beta.vercel.app/)
+[![Demo](/.github/open-blog-demo.gif)](https://open-blog-beta.vercel.app)
 
 ## Our Template Stack
 
