@@ -24,6 +24,8 @@ Take a look at the demo of the Minimalist template!
 
 ![Search Page](./.github/open-blog-search.png)
 
+![Author Page](./.github/open-blog-author.png)
+
 ![Card List](./.github/open-blog-card-list.png)
 
 ## Clone Repository
