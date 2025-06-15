@@ -41,7 +41,12 @@ export default async function Page({
   if (!post) {
     notFound();
   }
+  const getTag = post.tags[0]?.toLocaleLowerCase().trim().replaceAll(" ", "-");
 
+  const getAuthor = post.author
+    ?.toLocaleLowerCase()
+    .trim()
+    .replaceAll(" ", "-");
   const getImageURL = getAvtar(2);
   const getDate = dayjs(post.date).format("DD MMM YYYY");
   return (
@@ -54,7 +59,7 @@ export default async function Page({
         <article className="col-span-4 flex flex-col gap-10 md:gap-14">
           <div className="flex flex-col gap-3">
             <div className="text-md flex flex-wrap items-center gap-2 font-medium">
-              <span>Published by {post.author} on </span>
+              <span>Published on </span>
               <time
                 className="mx-1 text-base font-light"
                 dateTime={post.date.toString()}
@@ -63,7 +68,9 @@ export default async function Page({
                 {getDate}
               </time>{" "}
               <span>·</span>
-              <span className="font-medium">{post.category}</span>
+              <Link href={`/tags/${getTag}`} className="font-medium">
+                {post.category}
+              </Link>
             </div>
             <h1 className="mb-2 text-3xl font-extrabold lg:mb-6 lg:text-4xl">
               {post.title}
@@ -73,7 +80,12 @@ export default async function Page({
                 <AvatarImage src={getImageURL} />
                 <AvatarFallback>{post.author}</AvatarFallback>
               </Avatar>
-              <p>{post.author} </p>
+              <Link
+                className="font-medium text-card-foreground"
+                href={`/author/${getAuthor}`}
+              >
+                {post.author}{" "}
+              </Link>
             </div>
             <p className="text-xl font-medium">{post.description}</p>
           </div>
