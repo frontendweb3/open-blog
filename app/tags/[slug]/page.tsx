@@ -30,7 +30,7 @@ export default async function Page({
   return (
     <>
       <section className="mx-auto my-8 max-w-6xl py-10">
-        <h2 className="px-4 py-2 text-xl font-bold text-white transition">
+        <h2 className="px-4 py-2 text-xl font-bold capitalize transition">
           Articles Related to {slug}
         </h2>
       </section>

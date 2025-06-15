@@ -30,7 +30,7 @@ export default async function Page({
   return (
     <>
       <section className="mx-auto my-8 max-w-6xl py-10">
-        <h2 className="px-4 py-2 text-xl font-bold text-white capitalize transition">
+        <h2 className="px-4 py-2 text-xl font-bold capitalize transition">
           Articles Published By {slug.toLowerCase().trim().split("-").join(" ")}
         </h2>
       </section>
