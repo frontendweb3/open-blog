@@ -15,38 +15,24 @@ export function Footer() {
       <div className="container mx-auto flex flex-wrap items-center justify-around gap-4 md:justify-between">
         <div className="flex flex-row flex-wrap">
           <Button variant="link" asChild>
-            <Link href={"#"}>
-              <Facebook />
-            </Link>
-          </Button>
-
-          <Button variant="link" asChild>
-            <Link href={"#"}>
-              {" "}
-              <Instagram />{" "}
-            </Link>
-          </Button>
-
-          <Button variant="link" asChild>
-            <Link href={"https://x.com/FrontendWeb3"}>
-              <Twitter />{" "}
-            </Link>
-          </Button>
-
-          <Button variant="link" asChild>
-            <Link href={"https://www.linkedin.com/company/frontendweb"}>
-              {" "}
-              <Linkedin />{" "}
-            </Link>
-          </Button>
-
-          <Button variant="link" asChild>
             <Link
               target="_blank"
-              href={"https://github.com/frontendweb3/open-blog"}
+              href={"https://www.linkedin.com/company/frontendweb/"}
             >
+              <Linkedin />
+            </Link>
+          </Button>
+
+          <Button variant="link" asChild>
+            <Link target="_blank" href={"https://github.com/frontendweb3"}>
               {" "}
               <Github />{" "}
+            </Link>
+          </Button>
+
+          <Button variant="link" asChild>
+            <Link target="_blank" href={"https://x.com/FrontendWeb3"}>
+              <Twitter />{" "}
             </Link>
           </Button>
         </div>

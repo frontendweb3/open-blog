@@ -33,23 +33,27 @@ export function Header() {
             </Link>
           </Button>
           <Button variant="link" asChild>
-            <Link href={"#"}>
-              <Facebook />
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/company/frontendweb/"}
+            >
+              <Linkedin />
             </Link>
           </Button>
 
           <Button variant="link" asChild>
-            <Link href={"#"}>
+            <Link target="_blank" href={"https://github.com/frontendweb3"}>
               {" "}
-              <Instagram />{" "}
+              <Github />{" "}
             </Link>
           </Button>
 
           <Button variant="link" asChild>
-            <Link href={"https://x.com/FrontendWeb3"}>
+            <Link target="_blank" href={"https://x.com/FrontendWeb3"}>
               <Twitter />{" "}
             </Link>
           </Button>
+
           <ThemeSwitch />
         </div>
       </div>
