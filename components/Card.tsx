@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import type { Posts } from "@/type";
@@ -13,9 +14,18 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import dayjs from "dayjs";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { getAvtar, randomNumber } from "@/lib/getAvtar";
+import { useEffect, useState } from "react";
 
 export function BlogCard({ item }: { item: Posts }) {
   let getDate = dayjs(item.date).format("DD MMMM, YYYY");
+  const [number, setNumber] = useState(1);
+
+  useEffect(() => {
+    setNumber(randomNumber());
+  }, []);
+
+  const getImageURL = getAvtar(number);
   return (
     <Card
       key={item.id}
@@ -26,7 +36,7 @@ export function BlogCard({ item }: { item: Posts }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Avatar>
-              <AvatarImage src="https://pageui.shipixen.com/_next/image?url=%2Fstatic%2Fimages%2Fpeople%2F2.webp&w=1920&q=75" />
+              <AvatarImage src={getImageURL} />
               <AvatarFallback>{item.author} </AvatarFallback>
             </Avatar>
             <span className="text-sm text-gray-600 dark:text-gray-400">
