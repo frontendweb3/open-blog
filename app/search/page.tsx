@@ -40,7 +40,7 @@ export default function Search() {
         </section>
       )}
 
-      <div className="container grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2">
         {allPosts.map((post) => (
           <BlogCard key={post.item.id} item={post.item} />
         ))}

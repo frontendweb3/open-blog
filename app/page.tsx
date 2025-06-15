@@ -24,7 +24,7 @@ export default function Home() {
         </h2>
       </section>
 
-      <div className="container grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2">
         {allPosts.map((item: Posts) => (
           <BlogCard key={item.id} item={item} />
         ))}

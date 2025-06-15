@@ -34,7 +34,7 @@ export default async function Page({
           Articles Related to {slug}
         </h2>
       </section>
-      <div className="container mt-12 mb-20 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="container mt-12 mb-20 grid grid-cols-1 gap-6 lg:grid-cols-2">
         {posts.map((item: Posts) => (
           <BlogCard key={item.id} item={item} />
         ))}
