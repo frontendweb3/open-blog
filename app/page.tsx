@@ -16,7 +16,10 @@ export default function Home() {
     <>
       <Hero />
       <section className="mx-auto my-8 max-w-6xl py-10">
-        <h2 className="px-4 py-2 text-xl font-bold text-white transition">
+        <h2
+          id="latest-article"
+          className="cursor-auto scroll-m-10 px-4 py-2 text-xl font-bold transition"
+        >
           Read Our Latest Article
         </h2>
       </section>
