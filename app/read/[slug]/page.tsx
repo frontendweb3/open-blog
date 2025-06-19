@@ -11,7 +11,6 @@ import { notFound } from "next/navigation";
 import dayjs from "dayjs";
 import { getDomain } from "@/lib/getDomain";
 import { Share } from "@/components/Share";
-import { getAvtar, randomNumber } from "@/lib/getAvtar";
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post.slug }));
 
@@ -47,7 +46,6 @@ export default async function Page({
     ?.toLocaleLowerCase()
     .trim()
     .replaceAll(" ", "-");
-  const getImageURL = getAvtar(2);
   const getDate = dayjs(post.date).format("DD MMM YYYY");
   return (
     <div className="mx-auto border-r border-l px-8 py-12 md:p-24 lg:w-[1280px]">
@@ -77,7 +75,7 @@ export default async function Page({
             </h1>
             <div className="flex flex-row items-center gap-x-4">
               <Avatar className="outline">
-                <AvatarImage src={getImageURL} />
+                <AvatarImage src={"/images/user.png"} />
                 <AvatarFallback>{post.author}</AvatarFallback>
               </Avatar>
               <Link
