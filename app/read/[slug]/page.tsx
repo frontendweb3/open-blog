@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import dayjs from "dayjs";
 import { getDomain } from "@/lib/getDomain";
 import { Share } from "@/components/Share";
+import type { Metadata } from "next";
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post.slug }));
 
@@ -18,7 +19,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const slug = (await params).slug;
 
   const post = GetPost(slug);
@@ -66,20 +67,23 @@ export default async function Page({
                 {getDate}
               </time>{" "}
               <span>·</span>
-              <Link href={`/tags/${getTag}`} className="font-medium">
+              <Link
+                href={`/tags/${getTag}`}
+                className="font-medium underline-offset-4 hover:underline"
+              >
                 {post.category}
               </Link>
             </div>
             <h1 className="mb-2 text-3xl font-extrabold lg:mb-6 lg:text-4xl">
               {post.title}
             </h1>
-            <div className="flex flex-row items-center gap-x-4">
-              <Avatar className="outline">
+            <div className="my-1.5 flex flex-row items-center gap-x-3">
+              <Avatar className="size-5 outline">
                 <AvatarImage src={"/images/user.png"} />
                 <AvatarFallback>{post.author}</AvatarFallback>
               </Avatar>
               <Link
-                className="font-medium text-card-foreground"
+                className="font-medium text-card-foreground underline-offset-2 hover:underline"
                 href={`/author/${getAuthor}`}
               >
                 {post.author}{" "}

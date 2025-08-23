@@ -28,10 +28,10 @@ export function BlogCard({ item }: { item: Posts }) {
       <CardContent className="flex flex-1 flex-col gap-4 p-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Avatar>
+            {/* <Avatar>
               <AvatarImage src={"/images/user.png"} />
               <AvatarFallback>{item.author} </AvatarFallback>
-            </Avatar>
+            </Avatar> */}
             <span className="text-sm text-gray-600 dark:text-gray-400">
               {item.author}
             </span>
@@ -44,12 +44,18 @@ export function BlogCard({ item }: { item: Posts }) {
             {getDate}
           </time>
         </div>
-        <Link href={`/read/${item.slug}`}>
+        <Link
+          className="underline-offset-4 hover:underline"
+          href={`/read/${item.slug}`}
+        >
           <CardTitle className="line-clamp-2 text-xl font-semibold transition-colors group-hover:text-gray-700 dark:group-hover:text-gray-300">
             {item.title}
           </CardTitle>
         </Link>
-        <Link href={`/read/${item.slug}`}>
+        <Link
+          className="underline-offset-4 hover:underline"
+          href={`/read/${item.slug}`}
+        >
           <CardDescription className="line-clamp-3 text-gray-600 dark:text-gray-300">
             {item.description}
           </CardDescription>
